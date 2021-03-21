@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+
+int main() {
+	int num;
+	cin >> num;
+	int result = num;
+	int count = 0;
+	int a, b, c, d;
+	while (true) {
+		a = num / 10; //십의 자리
+		b = num % 10; // 일의 자리
+		c = (a + b) % 10;
+		d = b * 10 + c;
+		count++;
+		if (d == result) {
+			break;
+		}
+		num = d;
+	}
+	cout << count;
+}
