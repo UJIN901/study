@@ -1,0 +1,22 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+const int MAX = 1000;
+int num, i;
+int p[MAX];
+int main() {
+	cin >> num;
+	for (int i = 0; i < num; i++) {
+		cin >> p[i];
+	}
+
+	sort(p, p + num);
+	int sum = 0;
+	for (int i = 0; i < num; i++) {
+		sum += p[i] * (num - i);
+	}
+
+	cout << sum << endl;
+	return 0;
+}
