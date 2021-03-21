@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int sugar;
+	int count = 0;
+
+	cin >> sugar;
+
+	while (true) {
+		if (sugar % 5 == 0) {
+			count += sugar / 5;
+			cout << count;
+			break;
+		}
+		sugar -= 3;
+		count++;
+
+		if (sugar < 0) {
+			cout << "-1";
+			break;
+		}
+
+	}
+	
+}
